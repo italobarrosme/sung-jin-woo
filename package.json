@@ -9,7 +9,7 @@
     "test:coverage": "vitest run --coverage",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint .",
     "test:e2e": "cypress run"
   },
   "dependencies": {

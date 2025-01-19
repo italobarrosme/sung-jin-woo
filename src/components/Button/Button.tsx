@@ -17,7 +17,7 @@ const buttonStyles = cva(['bg-primary-regular px-4 py-2 text-base'], {
       regular: 'rounded-md bg-primary-regular',
       secondary: 'rounded-lg bg-secondary-regular',
       outline:
-        'bg-transparent border border-primary-regular text-primary-regular',
+        'border border-primary-regular bg-transparent text-primary-regular',
       ghost: 'bg-transparent text-primary-regular',
     },
   },
