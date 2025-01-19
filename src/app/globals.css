@@ -4,23 +4,23 @@
 
 @layer base {
   :root {
-    --color-primary-regular: 210 91% 45%;
-    --color-primary-foreground: 0, 10%, 93%;
+    --color-primary-regular: 210 91% 45%; /* #0066FF */
+    --color-primary-foreground: 0, 10%, 93%; /* #F5F5F5 */
 
-    --color-secondary-regular: 220 70% 20%;
-    --color-secondary-foreground: 220 100% 98%;
+    --color-secondary-regular: 220 70% 20%; /* #0066FF */
+    --color-secondary-foreground: 220 100% 98%; /* #F5F5F5 */
 
-    --color-neutral-black: 0 0% 7.5%;
-    --color-neutral-white: 0 0% 97.6%;
-    --color-neutral-light: 0 0% 76.9%;
-    --color-neutral-lightest: 0 0% 0%;
-    --color-neutral-dark: 180 23.5% 9%;
+    --color-neutral-black: 0 0% 7.5%; /* #000000 */
+    --color-neutral-white: 0 0% 97.6%; /* #FFFFFF */
+    --color-neutral-light: 0 0% 76.9%; /* #C4C4C4 */
+    --color-neutral-lightest: 0 0% 0%; /* #000000 */
+    --color-neutral-dark: 180 23.5% 9%; /* #1A1A1A */
 
-    --color-feedback-error: 4 89% 58%;
-    --color-feedback-warning: 36 100% 50%;
-    --color-feedback-success: 122 39% 54%;
-    --color-feedback-info: 207 90% 57%;
+    --color-feedback-error: 4 89% 58%; /* #FF0000 */
+    --color-feedback-warning: 36 100% 50%; /* #FFA500 */
+    --color-feedback-success: 122 39% 54%; /* #008000 */
+    --color-feedback-info: 207 90% 57%; /* #0000FF */
 
-    --color-complementary-highlight: 39 100% 50%;
+    --color-complementary-highlight: 39 100% 50%; /* #00FF00 */
   }
 }

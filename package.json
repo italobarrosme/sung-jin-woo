@@ -1,6 +1,6 @@
 {
-  "name": "nezuko-2",
-  "version": "0.1.0",
+  "name": "sung-jin-woo",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -10,16 +10,21 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "test:e2e": "cypress run"
+    "test:e2e": "cypress run",
+    "prepare": "lefthook install"
   },
   "dependencies": {
+    "@iconify/react": "^5.2.0",
     "@types/jest": "^29.5.14",
     "@vitejs/plugin-react": "^4.3.4",
     "class-variance-authority": "^0.7.1",
+    "leaflet": "^1.9.4",
+    "mapbox-gl": "^3.9.3",
     "next": "15.1.5",
     "postcss-import": "^16.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-leaflet": "^5.0.0",
     "tailwind-merge": "^2.6.0",
     "vite-tsconfig-paths": "^5.1.4"
   },
