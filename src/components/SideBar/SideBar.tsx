@@ -1,31 +1,39 @@
 'use client'
 
-import { useState } from 'react'
+import { ReactNode, useState } from 'react'
 import { MenuItems, MenuOption } from './MenuItems'
 import { cn } from '@/utils/cn'
 
 type SideBarProps = {
   items: MenuOption[]
   isExpandedFlag?: boolean
+  children?: ReactNode
 }
 
-export const SideBar = ({ items, isExpandedFlag }: SideBarProps) => {
+export const SideBar = ({ items, isExpandedFlag, children }: SideBarProps) => {
   const [expandedItems, setExpandedItems] = useState<string[]>([])
   const [isExpanded, setIsExpanded] = useState(isExpandedFlag || false)
+
+  const handleOverlayClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      setIsExpanded(!isExpanded)
+    }
+  }
 
   return (
     <aside
       className={cn(
-        'fixed right-0 top-0 h-screen bg-neutral-dark text-white z-50 shadow-lg transition-all duration-300 ease-in-out animate-fade-in cursor-pointer',
+        'fixed right-0 top-0 h-screen bg-neutral-dark p-4 text-white z-30 shadow-lg transition-all duration-300 ease-in-out animate-fade-in cursor-pointer',
         {
           'w-64': isExpanded,
           'w-16': !isExpanded,
         },
       )}
-      onClick={() => setIsExpanded(!isExpanded)}
+      onClick={handleOverlayClick}
     >
       {isExpanded ? (
-        <nav className="h-full animate-fade-in px-3 py-4">
+        <nav className="animate-fade-in flex flex-col gap-4">
+          {children}
           <MenuItems
             items={items}
             isExpanded={isExpanded}
@@ -34,9 +42,12 @@ export const SideBar = ({ items, isExpandedFlag }: SideBarProps) => {
           />
         </nav>
       ) : (
-        <div className="flex h-screen animate-fade-in flex-col items-center justify-center">
+        <aside
+          onClick={handleOverlayClick}
+          className="flex h-screen animate-fade-in flex-col items-center justify-center "
+        >
           <span className="h-8 w-1 rounded-lg bg-complementary-highlight"></span>
-        </div>
+        </aside>
       )}
     </aside>
   )

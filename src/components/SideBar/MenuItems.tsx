@@ -37,7 +37,7 @@ export const MenuItems = ({
   }
 
   return (
-    <ul className={`space-y-2 ${level > 0 ? 'ml-4' : ''}`}>
+    <ul className={`space-y-2 z-50 ${level > 0 ? 'ml-4' : ''}`}>
       {items.map((item, index) => {
         const isActive = pathname === item.link
         const isItemExpanded = expandedItems.includes(item.label)
