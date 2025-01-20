@@ -32,7 +32,7 @@ export const SideBar = ({ items, isExpandedFlag, children }: SideBarProps) => {
       onClick={handleOverlayClick}
     >
       {isExpanded ? (
-        <nav className="animate-fade-in flex flex-col gap-4">
+        <nav className="flex animate-fade-in flex-col gap-4">
           {children}
           <MenuItems
             items={items}
