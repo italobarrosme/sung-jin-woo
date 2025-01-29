@@ -5,7 +5,7 @@ import { MenuItems, MenuOption } from './MenuItems'
 import { cn } from '@/utils/cn'
 
 type SideBarProps = {
-  items: MenuOption[]
+  items?: MenuOption[]
   isExpandedFlag?: boolean
   children?: ReactNode
 }
@@ -34,12 +34,14 @@ export const SideBar = ({ items, isExpandedFlag, children }: SideBarProps) => {
       {isExpanded ? (
         <nav className="flex animate-fade-in flex-col gap-4">
           {children}
-          <MenuItems
-            items={items}
-            isExpanded={isExpanded}
-            expandedItems={expandedItems}
-            setExpandedItems={setExpandedItems}
-          />
+          {items && (
+            <MenuItems
+              items={items}
+              isExpanded={isExpanded}
+              expandedItems={expandedItems}
+              setExpandedItems={setExpandedItems}
+            />
+          )}
         </nav>
       ) : (
         <aside

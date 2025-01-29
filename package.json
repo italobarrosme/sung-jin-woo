@@ -20,6 +20,7 @@
     "@types/jest": "^29.5.14",
     "@vitejs/plugin-react": "^4.3.4",
     "class-variance-authority": "^0.7.1",
+    "ky": "^1.7.4",
     "leaflet": "^1.9.4",
     "mapbox-gl": "^3.9.3",
     "next": "15.1.5",
