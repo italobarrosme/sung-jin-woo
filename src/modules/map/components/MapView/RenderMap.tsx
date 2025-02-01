@@ -1,5 +1,6 @@
 'use client'
 
+import { Suspense } from 'react'
 import dynamic from 'next/dynamic'
 import { useLeagueMap } from '../../../leagues/hooks/useLeagueMap'
 
@@ -9,7 +10,7 @@ const MapView = dynamic(
       (mod) => mod.MapView,
     ),
   {
-    ssr: false,
+    ssr: false, // Desabilitando o SSR para esse componente
   },
 )
 
@@ -25,10 +26,12 @@ export const RenderMap = () => {
   }
 
   return (
-    <MapView
-      teams={teams}
-      center={mapLocation.center}
-      zoom={mapLocation.zoom}
-    />
+    <Suspense fallback={<div>Loading Map...</div>}>
+      <MapView
+        teams={teams}
+        center={mapLocation.center}
+        zoom={mapLocation.zoom}
+      />
+    </Suspense>
   )
 }

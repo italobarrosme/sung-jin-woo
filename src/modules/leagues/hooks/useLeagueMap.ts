@@ -1,3 +1,5 @@
+'use client'
+
 import { useTeamsPLStore } from '@/modules/leagues/store/useTeamsPLStore'
 import { useSearchParams } from 'next/navigation'
 import { useMemo, useEffect } from 'react'
