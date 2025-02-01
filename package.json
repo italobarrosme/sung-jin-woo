@@ -1,5 +1,5 @@
 {
-  "name": "sung-jin-woo",
+  "name": "geo-matches",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -12,14 +12,15 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test:e2e": "cypress run",
-    "prepare": "lefthook install"
+    "prepare": "lefthook install",
+    "generate-coordinates": "tsx -r dotenv/config src/scripts/generateStadiumCoordinates.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
-    "@iconify/react": "^5.2.0",
     "@types/jest": "^29.5.14",
     "@vitejs/plugin-react": "^4.3.4",
     "class-variance-authority": "^0.7.1",
+    "dotenv": "^16.4.7",
     "ky": "^1.7.4",
     "leaflet": "^1.9.4",
     "mapbox-gl": "^3.9.3",
@@ -31,17 +32,20 @@
     "react-leaflet": "^5.0.0",
     "tailwind-merge": "^2.6.0",
     "vite-tsconfig-paths": "^5.1.4",
-    "zod": "^3.24.1"
+    "zod": "^3.24.1",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "@eslint/eslintrc": "^3",
+    "@iconify/react": "^5.2.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.6.0",
     "@types/cypress": "^0.1.6",
+    "@types/leaflet": "^1.9.16",
     "@types/node": "^20.17.14",
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
@@ -62,6 +66,7 @@
     "postcss": "^8",
     "prettier": "3.4.2",
     "tailwindcss": "^3.4.1",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "vitest": "^3.0.2"
   }

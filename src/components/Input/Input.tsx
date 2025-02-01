@@ -12,9 +12,15 @@ const inputVariants = cva(
         default: 'border-primary-regular focus:border-neutral-white',
         error: 'border-feedback-error focus:border-feedback-error',
       },
+      theme: {
+        light:
+          'bg-neutral-white text-neutral-black placeholder:text-neutral-lightest/20',
+        dark: 'bg-neutral-black text-neutral-white placeholder:text-neutral-lightest',
+      },
     },
     defaultVariants: {
       variant: 'default',
+      theme: 'light',
     },
   },
 )

@@ -1,5 +1,7 @@
 'use client'
+
 import dynamic from 'next/dynamic'
+import { useLeagueMap } from '../../../leagues/hooks/useLeagueMap'
 
 const MapView = dynamic(
   () =>
@@ -12,5 +14,21 @@ const MapView = dynamic(
 )
 
 export const RenderMap = () => {
-  return <MapView games={[]} />
+  const { teams, isLoading, mapLocation } = useLeagueMap()
+
+  if (isLoading) {
+    return (
+      <div className="flex h-screen w-full items-center justify-center">
+        Carregando ligas, carregando times...
+      </div>
+    )
+  }
+
+  return (
+    <MapView
+      teams={teams}
+      center={mapLocation.center}
+      zoom={mapLocation.zoom}
+    />
+  )
 }

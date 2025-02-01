@@ -1,0 +1,162 @@
+[
+  {
+    "teams": "Arsenal FC",
+    "address": "Emirates Stadium",
+    "coordinates": {
+      "lat": 51.5550403,
+      "lng": -0.1083997
+    }
+  },
+  {
+    "teams": "Aston Villa FC",
+    "address": "Villa Park",
+    "coordinates": {
+      "lat": 52.5091264,
+      "lng": -1.8850354
+    }
+  },
+  {
+    "teams": "Chelsea FC",
+    "address": "Stamford Bridge",
+    "coordinates": {
+      "lat": 51.4816869,
+      "lng": -0.1910336
+    }
+  },
+  {
+    "teams": "Everton FC",
+    "address": "Goodison Park",
+    "coordinates": {
+      "lat": 53.4386898,
+      "lng": -2.9664193
+    }
+  },
+  {
+    "teams": "Fulham FC",
+    "address": "Craven Cottage",
+    "coordinates": {
+      "lat": 51.4749218,
+      "lng": -0.2217448
+    }
+  },
+  {
+    "teams": "Liverpool FC",
+    "address": "Anfield",
+    "coordinates": {
+      "lat": 53.4309164,
+      "lng": -2.9609314
+    }
+  },
+  {
+    "teams": "Manchester City FC",
+    "address": "Etihad Stadium",
+    "coordinates": {
+      "lat": 53.483091,
+      "lng": -2.200252
+    }
+  },
+  {
+    "teams": "Manchester United FC",
+    "address": "Old Trafford",
+    "coordinates": {
+      "lat": 53.4631095,
+      "lng": -2.2913865
+    }
+  },
+  {
+    "teams": "Newcastle United FC",
+    "address": "St. James' Park",
+    "coordinates": {
+      "lat": 54.9754693,
+      "lng": -1.6218737
+    }
+  },
+  {
+    "teams": "Tottenham Hotspur FC",
+    "address": "Tottenham Hotspur Stadium",
+    "coordinates": {
+      "lat": 51.604157,
+      "lng": -0.0662604
+    }
+  },
+  {
+    "teams": "Wolverhampton Wanderers FC",
+    "address": "Molineux Stadium",
+    "coordinates": {
+      "lat": 52.5902723,
+      "lng": -2.1304079
+    }
+  },
+  {
+    "teams": "Leicester City FC",
+    "address": "King Power Stadium",
+    "coordinates": {
+      "lat": 52.6203969,
+      "lng": -1.1423352
+    }
+  },
+  {
+    "teams": "Southampton FC",
+    "address": "St. Mary's Stadium",
+    "coordinates": {
+      "lat": 50.9058615,
+      "lng": -1.3908774
+    }
+  },
+  {
+    "teams": "Ipswich Town FC",
+    "address": "Portman Road Stadium",
+    "coordinates": {
+      "lat": 52.0549518,
+      "lng": 1.1452848
+    }
+  },
+  {
+    "teams": "Nottingham Forest FC",
+    "address": "The City Ground",
+    "coordinates": {
+      "lat": 52.9399387,
+      "lng": -1.1328954
+    }
+  },
+  {
+    "teams": "Crystal Palace FC",
+    "address": "Selhurst Park",
+    "coordinates": {
+      "lat": 51.3982429,
+      "lng": -0.0852551
+    }
+  },
+  {
+    "teams": "Brighton & Hove Albion FC",
+    "address": "The American Express Community Stadium",
+    "coordinates": {
+      "lat": 50.8615471,
+      "lng": -0.0836931
+    }
+  },
+  {
+    "teams": "Brentford FC",
+    "address": "Griffin Park",
+    "coordinates": {
+      "lat": 51.4881454,
+      "lng": -0.3025798
+    }
+  },
+  {
+    "teams": "West Ham United FC",
+    "address": "London Stadium",
+    "coordinates": {
+      "lat": 51.5386206,
+      "lng": -0.0166238
+    }
+  },
+  {
+    "teams": "AFC Bournemouth",
+    "address": "Vitality Stadium",
+    "coordinates": {
+      "lat": 50.7351814,
+      "lng": -1.8383279
+    }
+  }
+]
