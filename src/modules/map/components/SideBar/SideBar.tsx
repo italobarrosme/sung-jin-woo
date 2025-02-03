@@ -45,7 +45,7 @@ export const SideBar = ({ items, children }: SideBarProps) => {
         <Icon icon="mdi:close" width={24} height={24} />
       </Button>
       {isExpanded ? (
-        <nav className="flex animate-fade-in flex-col gap-4 h-[calc(100vh-1rem)]">
+        <nav className="flex h-[calc(100vh-1rem)] animate-fade-in flex-col gap-4">
           {children}
           {items && (
             <MenuItems

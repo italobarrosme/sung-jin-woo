@@ -6,9 +6,9 @@ import { TeamDetails } from '@/modules/leagues/components/TeamDetails'
 export default function Home() {
   return (
     <>
-      <div className="flex h-screen flex-col items-center justify-center gap-4 bg-neutral-black text-neutral-white overflow-hidden">
+      <div className="flex h-screen flex-col items-center justify-center gap-4 overflow-hidden bg-neutral-black text-neutral-white">
         <Suspense fallback={<div>Loading...</div>}>
-          <div className="flex h-full w-full">
+          <div className="flex size-full">
             <RenderMap />
             <SideBar>
               <TeamDetails />

@@ -40,7 +40,7 @@ export function Navbar({ items }: NavbarProps) {
             <Button
               variant="full-ghost"
               onClick={() => handleLeagueChange('')}
-              className="text-complementary-highlight font-bold"
+              className="font-bold text-complementary-highlight"
             >
               GeoMatches
             </Button>

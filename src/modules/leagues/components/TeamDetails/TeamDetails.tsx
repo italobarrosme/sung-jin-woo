@@ -12,8 +12,8 @@ export const TeamDetails = () => {
   }
 
   return (
-    <div key={team.id} className="p-4 justify-center">
-      <div className="flex items-center gap-4 mb-6 text-neutral-white">
+    <div key={team.id} className="justify-center p-4">
+      <div className="mb-6 flex items-center gap-4 text-neutral-white">
         <Image
           src={team.crest}
           alt={team.name}
