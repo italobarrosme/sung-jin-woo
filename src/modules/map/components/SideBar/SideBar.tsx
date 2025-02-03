@@ -3,6 +3,9 @@
 import { ReactNode, useState } from 'react'
 import { MenuItems, MenuOption } from './MenuItems'
 import { cn } from '@/utils/cn'
+import { Button } from '../../../../components/Button'
+import { Icon } from '@iconify/react/dist/iconify.js'
+import { useSideBar } from './useSideBar'
 
 type SideBarProps = {
   items?: MenuOption[]
@@ -10,29 +13,39 @@ type SideBarProps = {
   children?: ReactNode
 }
 
-export const SideBar = ({ items, isExpandedFlag, children }: SideBarProps) => {
+export const SideBar = ({ items, children }: SideBarProps) => {
+  const { isExpanded, toggleSideBar } = useSideBar()
   const [expandedItems, setExpandedItems] = useState<string[]>([])
-  const [isExpanded, setIsExpanded] = useState(isExpandedFlag || false)
 
   const handleOverlayClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
-      setIsExpanded(!isExpanded)
+      toggleSideBar()
     }
   }
 
   return (
     <aside
       className={cn(
-        'fixed right-0 top-0 h-screen bg-neutral-dark p-4 text-white z-30 shadow-lg transition-all duration-300 ease-in-out animate-fade-in cursor-pointer',
+        'h-screen bg-neutral-dark p-4 z-50 text-white shadow-2xl transition-all duration-300 ease-in-out animate-fade-in cursor-pointer relative',
         {
-          'w-64': isExpanded,
+          'w-1/2': isExpanded,
           'w-16': !isExpanded,
         },
       )}
       onClick={handleOverlayClick}
     >
+      <Button
+        type="button"
+        variant="small-ghost"
+        className={cn('absolute top-5 right-5 size-6', {
+          'opacity-0': !isExpanded,
+        })}
+        onClick={toggleSideBar}
+      >
+        <Icon icon="mdi:close" width={24} height={24} />
+      </Button>
       {isExpanded ? (
-        <nav className="flex animate-fade-in flex-col gap-4">
+        <nav className="flex animate-fade-in flex-col gap-4 h-[calc(100vh-1rem)]">
           {children}
           {items && (
             <MenuItems
@@ -44,12 +57,12 @@ export const SideBar = ({ items, isExpandedFlag, children }: SideBarProps) => {
           )}
         </nav>
       ) : (
-        <aside
+        <nav
           onClick={handleOverlayClick}
-          className="flex h-screen animate-fade-in flex-col items-center justify-center "
+          className="flex h-full animate-fade-in flex-col items-start justify-center"
         >
           <span className="h-8 w-1 rounded-lg bg-complementary-highlight"></span>
-        </aside>
+        </nav>
       )}
     </aside>
   )

@@ -3,11 +3,13 @@
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { cn } from '@/utils/cn'
 import { ReactNode } from 'react'
+import { Button } from '@/components/Button'
 
 interface NavItem {
   label: string
   value: string
   icon: ReactNode
+  blocked: boolean
 }
 
 interface NavbarProps {
@@ -31,43 +33,42 @@ export function Navbar({ items }: NavbarProps) {
   }
 
   return (
-    <nav className="fixed inset-x-0 top-10 z-50 mx-auto max-w-7xl rounded-full bg-neutral-dark">
+    <nav className="fixed inset-x-0 top-10 z-50 mx-auto max-w-7xl rounded-full bg-neutral-dark p-2">
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex h-12 items-center justify-between">
           <div className="shrink-0">
-            <button
+            <Button
+              variant="full-ghost"
               onClick={() => handleLeagueChange('')}
-              className="text-xl font-bold text-gray-800 dark:text-white"
+              className="text-complementary-highlight font-bold"
             >
               GeoMatches
-            </button>
+            </Button>
           </div>
 
           <div className="flex space-x-4">
             {items.map((item, index) => {
               return (
-                <button
-                  key={index}
+                <Button
+                  key={index + item.value}
+                  variant="fit-ghost"
                   onClick={() => handleLeagueChange(item.value)}
+                  disabled={item.blocked}
                   className={cn(
-                    'flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md transition-colors',
+                    'flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md transition-colors hover:text-complementary-highlight disabled:opacity-50',
                     currentLeague === item.value
-                      ? 'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white'
-                      : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white',
+                      ? 'border-l-4 border-b-2 border-complementary-highlight text-neutral-white rounded-2xl'
+                      : 'text-neutral-white',
                   )}
                 >
                   {item.icon}
                   {item.label}
-                </button>
+                </Button>
               )
             })}
           </div>
-
-          {/* Área para ações adicionais (opcional) */}
           <div className="flex items-center">
-            <button className="p-2 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
-              {/* Ícone ou ação adicional */}
-            </button>
+            <button className="p-2 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"></button>
           </div>
         </div>
       </div>

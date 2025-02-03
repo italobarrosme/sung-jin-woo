@@ -28,6 +28,10 @@ export const MapView = ({
   const mapProps = {
     center,
     zoom,
+    maxZoom: 15,
+    minZoom: 4,
+    zoomControl: false,
+    fadeAnimation: true,
     style: { height: '100vh', width: '100%', zIndex: 0 },
   }
 
