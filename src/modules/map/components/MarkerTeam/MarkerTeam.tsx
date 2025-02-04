@@ -6,6 +6,7 @@ import { Team } from '@/types/types'
 import { useTeamDetailsStore } from '@/modules/leagues/store/useTeamDetailsStore'
 import { useMap } from 'react-leaflet'
 import { useSideBar } from '../SideBar/useSideBar'
+
 type MarkerTeamProps = {
   team: Team
 }

@@ -1,22 +1,25 @@
 'use client'
 
 import { MapContainer, TileLayer } from 'react-leaflet'
-// import { MarkerGame } from '../MarkerGame'
 import { MarkerTeam } from '../MarkerTeam/MarkerTeam'
 import 'leaflet/dist/leaflet.css'
 import { Team } from '@/types/types'
-
-interface Game {
-  id: string
-  lat: number
-  lng: number
-}
+import { RoutingMap } from '../RoutingMap'
 
 interface MapViewProps {
-  games?: Game[]
   teams?: Team[]
   center: [number, number]
   zoom: number
+  routingPoints?: {
+    pointA: {
+      lat: number
+      lng: number
+    }
+    pointB: {
+      lat: number
+      lng: number
+    }
+  }
 }
 
 export const MapView = ({
@@ -24,6 +27,7 @@ export const MapView = ({
   teams = [],
   center,
   zoom,
+  routingPoints,
 }: MapViewProps) => {
   const mapProps = {
     center,
@@ -46,6 +50,12 @@ export const MapView = ({
       {teams.map((team: Team) => (
         <MarkerTeam key={team.id} team={team} />
       ))}
+      {routingPoints?.pointA && routingPoints?.pointB && (
+        <RoutingMap
+          pointA={routingPoints.pointA}
+          pointB={routingPoints.pointB}
+        />
+      )}
     </MapContainer>
   )
 }

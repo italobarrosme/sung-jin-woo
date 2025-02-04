@@ -40,9 +40,8 @@ export const TeamDetails = () => {
   )
 }
 
-// Componente auxiliar para exibir as informações
 const InfoItem = ({ label, value }: { label: string; value: string }) => (
-  <div className="border-b border-neutral-light pb-2">
+  <div className="border-b border-neutral-grey pb-2">
     <span className="font-medium ">{label}: </span>
     <span>{value}</span>
   </div>

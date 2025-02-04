@@ -33,7 +33,7 @@ export function Navbar({ items }: NavbarProps) {
   }
 
   return (
-    <nav className="fixed inset-x-0 top-10 z-50 mx-auto max-w-7xl rounded-full bg-neutral-dark p-2">
+    <nav className="fixed inset-x-0 top-10 z-50 mx-auto max-w-7xl rounded-full border-b-2 border-l-8 border-complementary-highlight bg-neutral-dark p-2">
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex h-12 items-center justify-between">
           <div className="shrink-0">

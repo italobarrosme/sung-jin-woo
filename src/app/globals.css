@@ -24,3 +24,11 @@
     --color-complementary-highlight: 39 100% 50%;
   }
 }
+
+.leaflet-routing-container {
+  display: none;
+}
+
+.leaflet-bar {
+  display: none;
+}
