@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { TeamDetails } from './TeamDetails'
 import { useTeamDetailsStore } from '../../store/useTeamDetailsStore'
-import { mockTeam } from '@/mocks/team'
+import { mockTeam } from '@/modules/football/mocks/team'
 
 vi.mock('../../store/useTeamDetailsStore')
 vi.mock('next/image', () => ({

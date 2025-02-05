@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { MapView } from './MapView'
 import { mockTeam } from '@/test/mocks/teamMock'
-import type { Team } from '@/types/types'
+import type { Team } from '@/modules/football/types'
 
 describe.skip('MapView', () => {
   const defaultProps = {

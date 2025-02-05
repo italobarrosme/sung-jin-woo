@@ -1,12 +1,10 @@
-import { getCoordinates } from '../modules/leagues/services/getCoordinatesAddress'
+import { getCoordinates } from '../modules/football/leagues/services/getCoordinatesAddress'
 import fs from 'fs/promises'
 import path from 'path'
 import dotenv from 'dotenv'
-
-// Carrega as variáveis de ambiente do arquivo .env
 dotenv.config()
 
-interface Stadium {
+type Stadium = {
   teams: string
   address: string
   coordinates?: {

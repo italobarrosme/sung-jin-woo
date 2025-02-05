@@ -1,6 +1,6 @@
 'use client'
 
-import { useTeamsPLStore } from '@/modules/leagues/store/useTeamsPLStore'
+import { useTeamsPLStore } from '@/modules/football/leagues/store/useTeamsPLStore'
 import { useSearchParams } from 'next/navigation'
 import { useMemo, useEffect } from 'react'
 import { leagueLocations, defaultLocation } from '../config/leagueLocations'
@@ -20,7 +20,6 @@ export function useLeagueMap(): UseLeagueMapReturn {
 
   const { teams, fetchTeams, isLoading } = useTeamsPLStore()
 
-  // Obtém a localização baseada na liga atual
   const mapLocation = useMemo(() => {
     if (currentLeague && leagueLocations[currentLeague]) {
       return leagueLocations[currentLeague]
@@ -28,7 +27,6 @@ export function useLeagueMap(): UseLeagueMapReturn {
     return defaultLocation
   }, [currentLeague])
 
-  // Carrega os times quando necessário
   useEffect(() => {
     if (currentLeague === 'premier-league') {
       fetchTeams()

@@ -2,8 +2,8 @@
 
 import { Marker } from 'react-leaflet'
 import { Icon } from 'leaflet'
-import { Team } from '@/types/types'
-import { useTeamDetailsStore } from '@/modules/leagues/store/useTeamDetailsStore'
+import { Team } from '@/modules/football/types'
+import { useTeamDetailsStore } from '@/modules/football/leagues/store/useTeamDetailsStore'
 import { useMap } from 'react-leaflet'
 import { useSideBar } from '../SideBar/useSideBar'
 

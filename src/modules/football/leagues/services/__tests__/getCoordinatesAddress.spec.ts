@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { getCoordinates } from './getCoordinatesAddress'
+import { getCoordinates } from '../getCoordinatesAddress'
 import ky from 'ky'
 
 vi.mock('ky')

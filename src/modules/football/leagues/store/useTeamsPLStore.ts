@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { getListTeamsPLAction } from '../actions/getListTeamsPLAction'
-import { Team } from '@/types/types'
+import { Team } from '@/modules/football/types'
 
 interface TeamsPLStore {
   teams: Team[]

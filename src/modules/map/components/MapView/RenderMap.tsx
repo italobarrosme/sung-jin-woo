@@ -2,7 +2,7 @@
 
 import { Suspense } from 'react'
 import dynamic from 'next/dynamic'
-import { useLeagueMap } from '../../../leagues/hooks/useLeagueMap'
+import { useLeagueMap } from '../../../football/leagues/hooks/useLeagueMap'
 
 const MapView = dynamic(
   () =>
@@ -10,7 +10,7 @@ const MapView = dynamic(
       (mod) => mod.MapView,
     ),
   {
-    ssr: false, // Desabilitando o SSR para esse componente
+    ssr: false,
   },
 )
 

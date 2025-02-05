@@ -3,7 +3,7 @@
 import { MapContainer, TileLayer } from 'react-leaflet'
 import { MarkerTeam } from '../MarkerTeam/MarkerTeam'
 import 'leaflet/dist/leaflet.css'
-import { Team } from '@/types/types'
+import { Team } from '@/modules/football/types'
 import { RoutingMap } from '../RoutingMap'
 
 interface MapViewProps {

@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 import { renderHook } from '@testing-library/react'
-import { useTeamDetailsStore } from './useTeamDetailsStore'
-import { mockTeam } from '@/mocks/team'
+import { useTeamDetailsStore } from '../useTeamDetailsStore'
+import { mockTeam } from '@/modules/football/mocks/team'
 
 describe.skip('useTeamDetailsStore', () => {
   beforeEach(() => {

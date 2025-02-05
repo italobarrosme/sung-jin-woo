@@ -1,7 +1,7 @@
 import { RenderMap } from '@/modules/map/components/MapView/RenderMap'
 import { Suspense } from 'react'
 import { SideBar } from '@/modules/map/components/SideBar'
-import { TeamDetails } from '@/modules/leagues/components/TeamDetails'
+import { TeamDetails } from '@/modules/football/leagues/components/TeamDetails'
 
 export default function Home() {
   return (

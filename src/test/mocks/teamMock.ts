@@ -1,4 +1,4 @@
-import { Team } from '@/types/types'
+import { Team } from '@/modules/football/types'
 
 export const mockTeam: Team = {
   lat: 51.5550403,

@@ -1,4 +1,4 @@
-import { Team } from '@/types/types'
+import { Team } from '@/modules/football/types'
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 

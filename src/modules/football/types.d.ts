@@ -1,4 +1,4 @@
-export type Game = {
+export type Match = {
   id: string
   latitude: number
   longitude: number

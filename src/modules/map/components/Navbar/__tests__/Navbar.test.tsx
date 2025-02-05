@@ -31,11 +31,13 @@ describe('Navbar', () => {
       label: 'Premier League',
       value: 'premier-league',
       icon: <span data-testid="pl-icon">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>,
+      blocked: false,
     },
     {
       label: 'La Liga',
       value: 'la-liga',
       icon: <span data-testid="laliga-icon">🇪🇸</span>,
+      blocked: false,
     },
   ]
 
@@ -51,7 +53,7 @@ describe('Navbar', () => {
   it('should render navbar with title and items', () => {
     render(<Navbar items={mockItems} />)
 
-    expect(screen.getByText('GeoMatches')).toBeInTheDocument()
+    expect(screen.getByRole('img', { name: 'GeoMatches' })).toBeInTheDocument()
     expect(screen.getByText('Premier League')).toBeInTheDocument()
     expect(screen.getByText('La Liga')).toBeInTheDocument()
     expect(screen.getByTestId('pl-icon')).toBeInTheDocument()

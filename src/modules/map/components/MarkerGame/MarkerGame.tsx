@@ -1,6 +1,6 @@
 'use client'
 
-import { Game } from '@/types/types'
+import { Game } from '@/modules/football/types'
 import { Marker, Popup } from 'react-leaflet'
 
 type MarkerGameProps = {

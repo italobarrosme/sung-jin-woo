@@ -1,6 +1,6 @@
 'use server'
 
-import { Team } from '@/types/types'
+import { Team } from '@/modules/football/types'
 import { getListTeamPLFootball } from '../services/getListTeamPLFootball'
 import stadiumCoordinates from '@/data/stadiumCoordinates.json'
 
