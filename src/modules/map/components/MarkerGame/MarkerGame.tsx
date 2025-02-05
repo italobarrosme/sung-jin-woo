@@ -1,22 +1,22 @@
 'use client'
 
-import { Game } from '@/modules/football/types'
+import { Match } from '@/modules/football/types'
 import { Marker, Popup } from 'react-leaflet'
 
 type MarkerGameProps = {
-  game: Game
+  match: Match
 }
 
-export const MarkerGame = ({ game }: MarkerGameProps) => {
+export const MarkerGame = ({ match }: MarkerGameProps) => {
   return (
-    <Marker position={[game.latitude, game.longitude]}>
+    <Marker position={[match.latitude, match.longitude]}>
       <Popup>
         <div>
           <h3>
-            {game.homeTeam} vs {game.awayTeam}
+            {match.homeTeam} vs {match.awayTeam}
           </h3>
-          <p>{game.date}</p>
-          <p>{game.venue}</p>
+          <p>{match.date}</p>
+          <p>{match.venue}</p>
         </div>
       </Popup>
     </Marker>

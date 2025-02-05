@@ -86,7 +86,7 @@ export function SearchTeamForm() {
           icon="mdi:loading"
           width={24}
           height={24}
-          className="text-complementary-highlight animate-spin absolute right-0 top-4"
+          className="absolute right-0 top-4 animate-spin text-complementary-highlight"
         />
       )}
     </form>
