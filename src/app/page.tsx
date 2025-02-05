@@ -2,6 +2,7 @@ import { RenderMap } from '@/modules/map/components/MapView/RenderMap'
 import { Suspense } from 'react'
 import { SideBar } from '@/modules/map/components/SideBar'
 import { TeamDetails } from '@/modules/football/leagues/components/TeamDetails'
+import { SearchTeamForm } from '@/modules/football/team/SearchTeam'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         <Suspense fallback={<div>Loading...</div>}>
           <div className="flex size-full">
             <RenderMap />
+            <SearchTeamForm />
             <SideBar>
               <TeamDetails />
             </SideBar>

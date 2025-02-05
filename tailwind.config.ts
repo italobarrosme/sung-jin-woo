@@ -184,6 +184,10 @@ export default {
           '0%': { filter: 'hue-rotate(0deg)' },
           '100%': { filter: 'hue-rotate(360deg)' },
         },
+        spin: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
       },
     },
     animation: {
@@ -203,6 +207,7 @@ export default {
       'accordion-down': 'accordion-down 0.2s ease-out',
       'accordion-up': 'accordion-up 0.2s ease-out',
       'hue-rotate': 'hue-rotate 5s infinite linear',
+      spin: 'spin 1s linear infinite',
     },
   },
   plugins: [],

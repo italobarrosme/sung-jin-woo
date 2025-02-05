@@ -1,11 +1,9 @@
 import { get } from '@/modules/infra/'
 import { Team, TeamsResponse, GetTeamError } from '../types/types'
 
-const BASE_PATH = 'teams'
-
 export async function getTeamById(id: number): Promise<Team> {
   try {
-    return await get(`${BASE_PATH}/${id}`, {
+    return await get(`teams/${id}`, {
       cache: 'force-cache',
       next: { revalidate: 3600 },
     })
@@ -20,7 +18,7 @@ export async function getTeamById(id: number): Promise<Team> {
 
 export async function getListTeams(
   page = 1,
-  limit = 20,
+  limit = 40,
 ): Promise<TeamsResponse> {
   try {
     const searchParams = new URLSearchParams({
@@ -28,10 +26,13 @@ export async function getListTeams(
       offset: ((page - 1) * limit).toString(),
     })
 
-    return await get(BASE_PATH, {
+    return await get(`${process.env.FOOTBALL_API_URL}/teams`, {
       searchParams,
       cache: 'force-cache',
       next: { revalidate: 3600 },
+      headers: {
+        'X-Auth-Token': process.env.FOOTBALL_API_KEY,
+      },
     })
   } catch (error) {
     throw {
