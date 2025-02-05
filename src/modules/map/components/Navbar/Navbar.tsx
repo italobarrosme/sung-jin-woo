@@ -5,6 +5,7 @@ import { cn } from '@/utils/cn'
 import { ReactNode } from 'react'
 import { Button } from '@/components/Button'
 import Image from 'next/image'
+import { SearchTeamForm } from '@/modules/football/team/SearchTeam'
 
 interface NavItem {
   label: string
@@ -48,6 +49,10 @@ export function Navbar({ items }: NavbarProps) {
               </span>
               <Image src="/logo.svg" alt="GeoMatches" width={32} height={32} />
             </Button>
+          </div>
+
+          <div>
+            <SearchTeamForm />
           </div>
 
           <div className="flex">

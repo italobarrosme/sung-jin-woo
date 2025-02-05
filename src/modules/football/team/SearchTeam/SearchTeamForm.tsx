@@ -21,9 +21,9 @@ export function SearchTeamForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="w-full">
       <Input
-        label="Buscar time"
-        placeholder="Digite o nome do time"
+        placeholder="Digite o nome do time que voce deseja buscar"
         error={errors.teamName?.message}
+        className="min-w-96"
         {...register('teamName')}
       />
     </form>
