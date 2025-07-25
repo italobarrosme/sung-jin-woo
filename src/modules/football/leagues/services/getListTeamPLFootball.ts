@@ -1,4 +1,4 @@
-import { get } from '@/modules/infra'
+import { get } from '@/infra/http/apiKy'
 import { Team } from '../../types'
 
 type ListTeamPLFootballResponse = {

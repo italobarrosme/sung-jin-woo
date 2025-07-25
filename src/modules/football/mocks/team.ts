@@ -5,6 +5,7 @@ export const mockTeam: Team = {
   name: 'Mock Team',
   tla: 'MCK',
   crest: 'https://mock-crest.png',
+  logo: 'https://mock-logo.png',
   address: 'Mock Address',
   website: 'https://mockteam.com',
   founded: 1900,

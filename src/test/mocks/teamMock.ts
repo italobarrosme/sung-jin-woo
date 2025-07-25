@@ -1,9 +1,10 @@
 import { Team } from '@/modules/football/types'
 
 export const mockTeam: Team = {
+  crest: 'https://crests.football-data.org/57.png',
   lat: 51.5550403,
   lng: -0.1083997,
-  crest: 'https://crests.football-data.org/57.png',
+  logo: 'https://crests.football-data.org/57.png',
   name: 'Arsenal FC',
   tla: 'ARS',
   id: 57,

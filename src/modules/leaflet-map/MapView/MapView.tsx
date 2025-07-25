@@ -1,13 +1,12 @@
 'use client'
 
 import { MapContainer, TileLayer } from 'react-leaflet'
-import { MarkerTeam } from '../MarkerTeam/MarkerTeam'
+import { MarkerPointData } from './components/MarkerPointData'
 import 'leaflet/dist/leaflet.css'
-import { Team } from '@/modules/football/types'
-import { RoutingMap } from '../RoutingMap'
+import { RoutingMap } from './components/RoutingMap'
 
-interface MapViewProps {
-  teams?: Team[]
+interface MapViewProps<T> {
+  data: T[]
   center: [number, number]
   zoom: number
   routingPoints?: {
@@ -22,13 +21,14 @@ interface MapViewProps {
   }
 }
 
-export const MapView = ({
-  // games = [],
-  teams = [],
+export const MapView = <
+  T extends { id: number; lat: number; lng: number; logo: string },
+>({
+  data = [],
   center,
   zoom,
   routingPoints,
-}: MapViewProps) => {
+}: MapViewProps<T>) => {
   const mapProps = {
     center,
     zoom,
@@ -44,11 +44,8 @@ export const MapView = ({
       <TileLayer
         url={`https://api.mapbox.com/styles/v1/italobarros1/cl0nw20po002r14neu9kepgod/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.NEXT_PUBLIC_MAPBOX_TOKEN}`}
       />
-      {/* {games.map((game) => (
-        <MarkerGame key={game.id} game={game} />
-      ))} */}
-      {teams.map((team: Team) => (
-        <MarkerTeam key={team.id} team={team} />
+      {data.map((item: T) => (
+        <MarkerPointData key={item.id} data={item} />
       ))}
       {routingPoints?.pointA && routingPoints?.pointB && (
         <RoutingMap

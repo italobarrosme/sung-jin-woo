@@ -2,13 +2,11 @@
 
 import { Suspense } from 'react'
 import dynamic from 'next/dynamic'
-import { useLeagueMap } from '../../../football/leagues/hooks/useLeagueMap'
+import { useLeagueMap } from '../../football/leagues/hooks/useLeagueMap'
 
 const MapView = dynamic(
   () =>
-    import('@/modules/map/components/MapView/MapView').then(
-      (mod) => mod.MapView,
-    ),
+    import('@/modules/leaflet-map/MapView/MapView').then((mod) => mod.MapView),
   {
     ssr: false,
   },
@@ -28,7 +26,7 @@ export const RenderMap = () => {
   return (
     <Suspense fallback={<div>Loading Map...</div>}>
       <MapView
-        teams={teams}
+        data={teams}
         center={mapLocation.center}
         zoom={mapLocation.zoom}
       />

@@ -18,6 +18,7 @@ export async function getListTeamsPLAction(): Promise<Team[]> {
         name: team.name,
         shortName: team.shortName,
         tla: team.tla,
+        logo: team.crest,
         crest: team.crest,
         address: team.venue,
         website: team.website,
