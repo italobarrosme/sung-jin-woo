@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-import { Navbar } from '../Navbar'
+import { Navbar } from './Navbar'
 import { useRouter, useSearchParams, usePathname } from 'next/navigation'
 import { describe, it, expect, vi } from 'vitest'
 

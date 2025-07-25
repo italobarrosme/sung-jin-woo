@@ -42,8 +42,9 @@ export type Team = {
   name: string
   shortName: string
   tla: string
-  crest: string
+  logo: string
   address: string
+  crest: string
   website: string
   founded: number
   clubColors: string

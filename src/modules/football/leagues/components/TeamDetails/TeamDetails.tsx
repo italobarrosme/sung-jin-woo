@@ -5,7 +5,7 @@ import { EmptyData } from '@/components/EmptyData'
 import { useTeamDetailsStore } from '../../store/useTeamDetailsStore'
 
 export const TeamDetails = () => {
-  const team = useTeamDetailsStore((state) => state.team)
+  const { team } = useTeamDetailsStore()
 
   if (!team) {
     return <EmptyData />

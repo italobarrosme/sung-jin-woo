@@ -17,6 +17,7 @@ export const useTeamsPLStore = create<TeamsPLStore>((set) => ({
     try {
       set({ isLoading: true, error: null })
       const teams = await getListTeamsPLAction()
+
       set({ teams, isLoading: false })
     } catch (error) {
       console.error('Erro ao carregar times:', error)

@@ -1,4 +1,4 @@
-import { get } from '@/modules/infra'
+import { get } from '@/infra/http/apiKy'
 
 export const getListTeamBSAFootball = async () => {
   const response = await get(

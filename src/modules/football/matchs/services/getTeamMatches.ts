@@ -1,4 +1,4 @@
-import { get } from '@/modules/infra'
+import { get } from '@/infra/http'
 import { Match } from '../../types'
 
 type TeamMatchesResponse = {

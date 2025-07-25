@@ -61,7 +61,6 @@ export async function getTeamAction(
 
         currentPage += 1
 
-        console.log('Fetching teams page:', currentPage)
         teams = await fetchWithRetry(() => getListTeams(currentPage))
 
         await delay(1000)

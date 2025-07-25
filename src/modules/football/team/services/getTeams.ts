@@ -1,4 +1,4 @@
-import { get } from '@/modules/infra/'
+import { get } from '@/infra/http/apiKy'
 import { Team, TeamsResponse, GetTeamError } from '../types/types'
 
 export async function getTeamById(id: number): Promise<Team> {

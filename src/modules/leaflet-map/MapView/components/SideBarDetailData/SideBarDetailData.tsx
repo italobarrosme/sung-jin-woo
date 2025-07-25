@@ -3,9 +3,9 @@
 import { ReactNode, useState } from 'react'
 import { MenuItems, MenuOption } from './MenuItems'
 import { cn } from '@/utils/cn'
-import { Button } from '../../../../components/Button'
+import { Button } from '../../../../../components/Button'
 import { Icon } from '@iconify/react/dist/iconify.js'
-import { useSideBar } from './useSideBar'
+import { useSideBarDetailDataStore } from './useSideBarDetailDataStore'
 
 type SideBarProps = {
   items?: MenuOption[]
@@ -13,8 +13,8 @@ type SideBarProps = {
   children?: ReactNode
 }
 
-export const SideBar = ({ items, children }: SideBarProps) => {
-  const { isExpanded, toggleSideBar } = useSideBar()
+export const SideBarDetailData = ({ items, children }: SideBarProps) => {
+  const { isExpanded, toggleSideBar } = useSideBarDetailDataStore()
   const [expandedItems, setExpandedItems] = useState<string[]>([])
 
   const handleOverlayClick = (e: React.MouseEvent) => {
